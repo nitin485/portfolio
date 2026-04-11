@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Arrows from "./arrows";
 import { RiMenu2Line } from "@remixicon/react";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <section className="absolute top-0 w-full z-50 bg-transparent ">
-      <div className="max-w-6xl px-6 mx-auto pt-8">
+    <section className="absolute top-0 w-full z-50 bg-transparent  ">
+      <div className=" max-w-6xl px-6 mx-auto pt-8">
         <div className="flex justify-between items-center">
           {/* arrow and name container */}
           <div className="flex items-center">
@@ -21,22 +22,53 @@ function Navbar() {
           </div>
           {/* nav links */}
           <nav>
-            <ul className="flex space-x-10 text-xs tracking-widest font-bold text-gray-400 uppercase">
-              <li>
-                <a href="#home" className="hover:text-white transition-colors">WORK</a>
+            <ul className="hidden md:flex space-x-10 text-xs tracking-widest font-bold text-gray-400 uppercase">
+              <li className="">
+                <a href="#home" className="hover:text-white transition-colors">
+                  WORK
+                </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">ABOUT</a>
+                <a href="#about" className="hover:text-white transition-colors">
+                  ABOUT
+                </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition-colors">CONTACT</a>
-              </li>
-              <li className="md:hidden ">
-                <RiMenu2Line size={24} className="text-white" />
+                <a
+                  href="#contact"
+                  className="hover:text-white transition-colors"
+                >
+                  CONTACT
+                </a>
               </li>
             </ul>
+            <div className="m">
+              <RiMenu2Line
+                size={24}
+                className="text-white"
+                onClick={() => setMenuOpen(!menuOpen)}
+              />
+            </div>
           </nav>
         </div>
+
+
+        {/* mobile menu */}
+        {menuOpen && (
+          <div className=" mt-10  fixed top-0  border h-screen    left-60  w-full  border-t border-gray-900 z-50">
+            <ul className=" flex  flex-col gap-4 border-2 w-fit text-xs tracking-widest   cursor-pointer font-bold text-gray-400 uppercase mt-6 space-y-4 ">
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   );
