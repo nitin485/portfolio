@@ -53,7 +53,7 @@ function Text() {
           href={reesume}
           target="_blank"
           rel="noreferrer"
-          download={true}
+          // download={true}
         
         >
           <button
@@ -66,7 +66,7 @@ function Text() {
         </a>
       </div>
     </div>
-  );2
+  );
 }
 
 export default Text;
