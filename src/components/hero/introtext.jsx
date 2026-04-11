@@ -49,9 +49,10 @@ function Text() {
       {/* CTA */}
       <div>
         <a
-          href="https://drive.google.com/file/d/1iRjbB6qY1xRt6Piqyif8U6crCsokN09i/view?usp=drive_link"
+          href="../../assets/nitin_bhardwaj_cv.pdf"
           target="_blank"
           rel="noreferrer"
+          download="nitin_bhardwaj_cv.pdf"
         >
           <button
             style={{ fontFamily: "inherit" }}
