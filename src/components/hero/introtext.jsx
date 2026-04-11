@@ -1,4 +1,5 @@
 import React from "react";
+import reesume from "../../assets/nitin_bhardwaj_cv.pdf";
 
 function Text() {
   return (
@@ -49,10 +50,11 @@ function Text() {
       {/* CTA */}
       <div>
         <a
-          href="../../assets/nitin_bhardwaj_cv.pdf"
+          href={reesume}
           target="_blank"
           rel="noreferrer"
-          download="nitin_bhardwaj_cv.pdf"
+          download={true}
+        
         >
           <button
             style={{ fontFamily: "inherit" }}
