@@ -5,7 +5,7 @@ function About() {
   return (
     <section
       id="about"
-      className="bg-black py-28 text-white border-b border-gray-900"
+      className="bg-black  py-10  md:py-28 text-white border-b border-gray-900"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* ── Heading ── */}

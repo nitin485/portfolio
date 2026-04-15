@@ -13,14 +13,14 @@ function Text() {
       </div>
 
       {/* Hero Name — MangoGrotesque */}
-      <div className="mb-10  ">
+      <div className="mb-14  ">
         <h1
           style={{
             fontFamily: "'MangoGrotesque', sans-serif",
-            letterSpacing: "0.04em",
+            letterSpacing: ".04em",
             lineHeight: "0.9",
           }}
-          className="text-[60px] font-bold text-white uppercase md:text-[96px]"
+          className="text-[100px] font-bold text-white uppercase md:text-[96px]"
         >
           NITIN
         </h1>

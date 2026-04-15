@@ -22,7 +22,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="bg-black py-28 border-b border-gray-900">
+    <section id="projects" className="bg-black  md:py-28 border border-gray-900">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* ── Unique heading layout ── */}
