@@ -5,7 +5,7 @@ function Contacts_us() {
     
 <section id="contact" className="min-h-screen bg-black text-white flex justify-center items-center py-20 border-t border-gray-900">
 
-  <div className="grid grid-cols-2 gap-16 w-full max-w-6xl mx-auto px-6">
+  <div className="grid md:grid-cols-2 gap-16 w-full max-w-6xl mx-auto px-6">
 
 
     {/* LEFT SIDE BIG TEXT */}
@@ -36,7 +36,7 @@ function Contacts_us() {
       </div>
 
     </div>
-v
+
 
 
     {/* RIGHT FORM */}

@@ -5,8 +5,8 @@ import { RiMenu2Line } from "@remixicon/react";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <section className="absolute top-0 w-full z-50 bg-transparent  ">
-      <div className=" max-w-6xl px-6 mx-auto pt-8">
+    <section className=" w-full z-50  fixed top-0   shadow-md  bg-black/40 backdrop-blur-md     left-0   ">
+      <div className=" md:max-w-6xl px-2 md:px-6 mx-auto py-4 ">
         <div className="flex justify-between items-center">
           {/* arrow and name container */}
           <div className="flex items-center">
@@ -24,12 +24,12 @@ function Navbar() {
           <nav>
             <ul className="hidden md:flex space-x-10 text-xs tracking-widest font-bold text-gray-400 uppercase">
               <li className="">
-                <a href="#home" className="hover:text-white transition-colors">
+                <a href="#home" className="hover:text-white transition-colors" onClick={()=>setMenuOpen(false)}>
                   WORK
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
+                <a href="#about" className="hover:text-white transition-colors" onClick={()=>setMenuOpen(false)}>
                   ABOUT
                 </a>
               </li>
@@ -37,12 +37,13 @@ function Navbar() {
                 <a
                   href="#contact"
                   className="hover:text-white transition-colors"
+                  onClick={() => setMenuOpen(false)}
                 >
                   CONTACT
                 </a>
               </li>
             </ul>
-            <div className="m">
+            <div className="md:hidden">
               <RiMenu2Line
                 size={24}
                 className="text-white"
@@ -55,8 +56,8 @@ function Navbar() {
 
         {/* mobile menu */}
         {menuOpen && (
-          <div className=" mt-10  fixed top-0  border h-screen    left-60  w-full  border-t border-gray-900 z-50">
-            <ul className=" flex  flex-col gap-4 border-2 w-fit text-xs tracking-widest   cursor-pointer font-bold text-gray-400 uppercase mt-6 space-y-4 ">
+          <div className="  overflow-x-hidden fixed top-0  border h-[91vh]  bg-gray-200  flex justify-center italic   border-t border-gray-900 z-50 mt-20 rounded-lg ">
+            <ul className=" flex  flex-col gap-20 w-fit text-sm tracking-widest   cursor-pointer font-bold text-gray-400 uppercase  mt-16">
               <li>
                 <a href="#home">Home</a>
               </li>

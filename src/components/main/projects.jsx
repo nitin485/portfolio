@@ -51,7 +51,7 @@ function Projects() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group grid grid-cols-[80px_1fr_320px] items-center border-t border-gray-900 py-10 gap-8 hover:border-gray-700 transition-all duration-300"
+              className="group grid md:grid-cols-[80px_1fr_320px] items-center border-t border-gray-900 py-10 gap-8 hover:border-gray-700 transition-all duration-300"
             >
               {/* number */}
               <span
@@ -71,7 +71,7 @@ function Projects() {
               </div>
 
               {/* image */}
-              <div className="h-[160px] overflow-hidden">
+              <div className="h-[160px] overflow-hidden ">
                 <img
                   src={project.img}
                   alt={project.name}

@@ -10,7 +10,7 @@ import Contacts_us from "../components/main/contactUs";
 function MainLayout() {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="min-h-screen border-2 border-amber-300  bg-gray-900 ">
         <Navbar />
         <Hero />
         <About />

@@ -1,5 +1,5 @@
 import React from "react";
-import reesume from "../../assets/nitin_bhardwaj_cv.pdf";
+import resume from "../../assets/nitin_bhardwaj_cv.pdf";
 
 function Text() {
   return (
@@ -13,7 +13,7 @@ function Text() {
       </div>
 
       {/* Hero Name — MangoGrotesque */}
-      <div className="mb-10 ">
+      <div className="mb-10  ">
         <h1
           style={{
             fontFamily: "'MangoGrotesque', sans-serif",
@@ -50,7 +50,7 @@ function Text() {
       {/* CTA */}
       <div>
         <a
-          href={reesume}
+          href={resume}
           target="_blank"
           rel="noreferrer"
           // download={true}

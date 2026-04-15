@@ -9,6 +9,7 @@ body {
 
   color: #fff;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 .bebas {
   font-family: "Bebas Neue", sans-serif;

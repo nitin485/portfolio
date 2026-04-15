@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-black relative overflow-hidden border-b border-gray-900 min-h-screen pt-32 pb-16 flex items-center"
+      className="bg-black relative overflow-hidden border-b border-gray-900 min-h-screen pt-32 pb-16 flex items-center border-4 "
     >
       {/* Content Container */}
       <div className="max-w-6xl w-full mx-auto md:flex relative px-6">
