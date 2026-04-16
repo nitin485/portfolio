@@ -24,12 +24,20 @@ function Navbar() {
           <nav>
             <ul className="hidden md:flex space-x-10 text-xs tracking-widest font-bold text-gray-400 uppercase">
               <li className="">
-                <a href="#home" className="hover:text-white transition-colors" onClick={()=>setMenuOpen(false)}>
+                <a
+                  href="#home"
+                  className="hover:text-white transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
                   WORK
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors" onClick={()=>setMenuOpen(false)}>
+                <a
+                  href="#about"
+                  className="hover:text-white transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
                   ABOUT
                 </a>
               </li>
@@ -53,11 +61,10 @@ function Navbar() {
           </nav>
         </div>
 
-
         {/* mobile menu */}
         {menuOpen && (
-          <div className="  overflow-x-hidden fixed top-0  border h-[91vh]  bg-gray-200  flex justify-center italic   border-t border-gray-900 z-50 mt-20 rounded-lg ">
-            <ul className=" flex  flex-col gap-20 w-fit text-sm tracking-widest   cursor-pointer font-bold text-gray-400 uppercase  mt-16">
+          <div className="   fixed top-0  border h-[91vh]  bg-gray-200  flex justify-center italic   border-t border-gray-900 z-50 mt-20 rounded-lg w-[90%] right-0 left-0 mx-auto"> 
+            <ul className=" flex  flex-col gap-20 w-100%  border-amber-950 border-2 text-sm tracking-widest   cursor-pointer font-bold text-gray-400 uppercase  items-end mt-16">
               <li>
                 <a href="#home">Home</a>
               </li>

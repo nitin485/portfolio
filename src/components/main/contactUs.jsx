@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 function Contacts_us() {
   const [name, setName] = useState("");
@@ -8,9 +9,49 @@ function Contacts_us() {
 
   function formsubmit(e) {
     e.preventDefault();
-    console.log("name: ", name);
-    console.log("mail: ", mail);
-    console.log("message: ", message);
+
+    // GOOGLE SHEETS
+    fetch(
+      "https://script.google.com/macros/s/AKfycbx7Dn85hvQzSLYlxGgPJ4Jx1nTw6LznlE5RTQ9yeQQvWlgADbj1UbWPcLFa5Dsz86bj/exec",
+      {
+        method: "POST",
+        mode: "no-cors", // 👈 MUST ADD
+
+        body: JSON.stringify({
+          name: name,
+          email: mail,
+          message: message,
+        }),
+      },
+    )
+      .then(() => {
+        console.log("Sent to sheet");
+      })
+      .catch((err) => {
+        console.log("Sheet error:", err);
+      });
+
+    // EMAIL
+    emailjs
+      .send(
+        "service_nb485zx",
+        "template_j6158se",
+        {
+          name: name,
+          email: mail,
+          message: message,
+        },
+        "A5NdaYzFYM2Q3ay_X",
+      )
+      .then(() => {
+        console.log("Email sent");
+        alert("Message sent successfully 🚀");
+      })
+      .catch((err) => {
+        console.log("Email error:", err);
+      });
+
+    // RESET
     setName("");
     setMail("");
     setMessage("");
@@ -37,7 +78,6 @@ function Contacts_us() {
           >
             LET'S
             <br />
-          
             <span className="text-gray-700 ">TALK.</span>
           </h1>
 
@@ -58,10 +98,16 @@ function Contacts_us() {
               >
                 Instagram
               </a>
-              <a href="https://github.com/nitin485" className="hover:text-white transition-colors">
+              <a
+                href="https://github.com/nitin485"
+                className="hover:text-white transition-colors"
+              >
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/nitin-bhardwaj-485/" className="hover:text-white transition-colors">
+              <a
+                href="https://www.linkedin.com/in/nitin-bhardwaj-485/"
+                className="hover:text-white transition-colors"
+              >
                 LinkedIn
               </a>
             </div>
@@ -93,6 +139,7 @@ function Contacts_us() {
               Email
             </label>
             <input
+              required
               placeholder="hello@example.com"
               className="bg-[#0a0a0a] border border-gray-800 p-3 md:p-4 focus:outline-none focus:border-gray-500 transition-colors text-white text-sm rounded-lg"
               value={mail}

@@ -13,6 +13,7 @@
     "@remixicon/react": "^4.9.0",
     "@tailwindcss/vite": "^4.1.18",
     "animejs": "^4.3.5",
+    "emailjs-com": "^3.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "remixicon": "^4.9.1",
