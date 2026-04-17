@@ -15,8 +15,8 @@ function Contacts_us() {
     e.preventDefault();
 
     // validation
-    if (!name || !mail || !message) {
-      alert("Please fill in all fields");
+    if (!name.trim() || !mail.trim() || !message.trim()) {
+      alert("Please fill in all fields 😤");
       return;
     }
 
@@ -35,7 +35,7 @@ function Contacts_us() {
             email: mail,
             message: message,
           }),
-        }
+        },
       );
 
       // ✅ EMAIL (async)
@@ -47,7 +47,7 @@ function Contacts_us() {
           email: mail,
           message: message,
         },
-        "A5NdaYzFYM2Q3ay_X"
+        "A5NdaYzFYM2Q3ay_X",
       );
 
       setSuccess(true); // show success
@@ -69,7 +69,6 @@ function Contacts_us() {
       className="min-h-screen bg-black text-white flex justify-center items-center py-15 md:py-20 border-t border-gray-900"
     >
       <div className="grid md:grid-cols-2 gap-16 w-full max-w-6xl mx-auto px-6">
-        
         {/* LEFT SIDE */}
         <div className="md:flex flex-col justify-center">
           <p className="text-[10px] tracking-[0.35em] text-gray-600 uppercase font-bold mb-3">
@@ -94,28 +93,56 @@ function Contacts_us() {
           </p>
 
           {/* SOCIAL */}
-          <div className="flex flex-col gap-3">
+          <div className="block md:flex flex-col gap-3">
             <p className="text-[10px] tracking-[0.3em] text-gray-700 uppercase font-bold">
               Find me on
             </p>
 
             <div className="flex gap-6 text-gray-600 text-xs tracking-[0.2em] uppercase font-bold">
-              <a href="https://www.instagram.com/bhardwajnitin485" className="hover:text-white">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.instagram.com/bhardwajnitin485"
+                className="hover:text-white"
+              >
                 Instagram
               </a>
-              <a href="https://github.com/nitin485" className="hover:text-white">
+              <a
+                rel="noreferror"
+                target="_blank"
+                href="https://github.com/nitin485"
+                className="hover:text-white"
+              >
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/nitin-bhardwaj-485/" className="hover:text-white">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.linkedin.com/in/nitin485"
+                className="hover:text-white"
+              >
                 LinkedIn
               </a>
+
+              {/* add pintersst  */}
+              {/* <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.pinterest.com/bhardwajnitin485"
+                className="hover:text-white"
+              >
+                pinterest
+              </a>
+               */}
             </div>
           </div>
         </div>
 
         {/* FORM */}
-        <form className="flex flex-col gap-6 justify-center" onSubmit={formsubmit}>
-          
+        <form
+          className="flex flex-col gap-6 justify-center"
+          onSubmit={formsubmit}
+        >
           {/* NAME */}
           <div className="flex flex-col gap-2">
             <label className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold ml-1">
@@ -135,6 +162,7 @@ function Contacts_us() {
               Email
             </label>
             <input
+              type="email"
               required
               value={mail}
               onChange={(e) => setMail(e.target.value)}
@@ -172,7 +200,6 @@ function Contacts_us() {
               Message sent successfully ✅
             </p>
           )}
-
         </form>
       </div>
     </section>
