@@ -64,14 +64,9 @@ function Navbar() {
         {/* mobile menu */}
         {menuOpen && (
           <div
-            className="flex justify-end   
-          
-
-
-          
- "
+            className="flex justify-end "
           >
-            <div className="   mt-10    h-[91vh]   flex justify-center    border-t border-gray-900 z-50  rounded-3xl w-1/2   bg-gradient-to-tr from-black to-gray-900">
+            <div className="   mt-0    h-[91vh]   flex justify-center    border-t border-gray-900 z-50  rounded-3xl w-1/2    bg-[#0a0a0a]">
               <ul className=" flex  mt-20 flex-col gap-20  w-100%    text-sm tracking-widest   cursor-pointer font-bold text-gray-400 uppercase  items-end    ">
                 <li>
                   <a href="#projects">Work</a>
