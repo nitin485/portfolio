@@ -1,5 +1,6 @@
 import React from "react";
-import resume from "../../assets/nitin_bhardwaj_cv.pdf";
+// import resume from "../../assets/nitin_bhardwaj_cv.pdf";
+import resume from  "../../public/nitin_bhardwaj_cv.pdf"
 
 function Text() {
   return (
