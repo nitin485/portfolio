@@ -3,7 +3,7 @@ import Arrows from "./arrows";
 import { RiMenu2Line } from "@remixicon/react";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false );
   return (
     <section className=" w-full z-50  fixed top-0   shadow-md       left-0   ">
       <div className=" md:max-w-6xl px-2 md:px-6 mx-auto py-4 ">
@@ -63,11 +63,15 @@ function Navbar() {
 
         {/* mobile menu */}
         {menuOpen && (
-          <div
-            className="flex justify-end "
-          >
-            <div className="   mt-0    h-[91vh]   flex justify-center    border-t border-gray-900 z-50  rounded-3xl w-1/2    bg-[#0a0a0a]">
-              <ul className=" flex  mt-20 flex-col gap-20  w-100%    text-sm tracking-widest   cursor-pointer font-bold text-gray-400 uppercase  items-end    ">
+          <div className="flex justify-end relative -mt-8 ml-44 bg-black opacity-75">
+            <div className="   mt-0    h-[91vh]   flex justify-center    border-t border-gray-900 z-50  rounded-3xl w-1/2  ">
+              <ul className=" flex   flex-col gap-20  w-100%    text-sm tracking-widest   cursor-pointer font-bold text-gray-400 uppercase  items-end    ">
+                <RiMenu2Line
+                  size={24}       
+                  className="text-white"
+                  onClick={() => setMenuOpen(!menuOpen)}
+                />
+                {/* <li><button onclickz> hello</button></li> */}
                 <li>
                   <a href="#projects">Work</a>
                 </li>
