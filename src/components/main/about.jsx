@@ -52,7 +52,7 @@ function About() {
 
           {/* text */}
           <div>
-            <div className="md-border-l-2 border-gray-800   w-full px-2 h-fit  border-2  rounded-xl py-8">
+            <div className="md-border-l-2 border-gray-800   w-full pl-0">
               <p className="text-gray-400 tracking-wide leading-6 text-sm md:text-sm">
                 I'm a frontend developer focused on converting modern UI designs
                 into clean, responsive websites. I work primarily with HTML,
@@ -66,10 +66,10 @@ function About() {
 
             {/* experience ,projects,and technologies */}
 
-            {/* <div className=" hidden  border md:flex gap-6 mt-10">
+            <div className=" hidden  border md:flex gap-6 mt-10">
               <div className="border border-gray-900 px-6 py-4 text-center">
                 <p className="text-white text-xl font-bold tracking-widest">
-                  2+
+                  0-1
                 </p>
                 <p className="text-gray-600 text-[10px] tracking-[0.2em] uppercase mt-1">
                   Years Exp.
@@ -77,7 +77,7 @@ function About() {
               </div>
               <div className="border border-gray-900 px-6 py-4 text-center">
                 <p className="text-white text-xl font-bold tracking-widest">
-                  10+
+                  2+
                 </p>
                 <p className="text-gray-600 text-[10px] tracking-[0.2em] uppercase mt-1">
                   Projects
@@ -85,13 +85,13 @@ function About() {
               </div>
               <div className="border border-gray-900 px-6 py-4 text-center">
                 <p className="text-white text-xl font-bold tracking-widest">
-                  6+
+                  7+
                 </p>
                 <p className="text-gray-600 text-[10px] tracking-[0.2em] uppercase mt-1">
                   Technologies
                 </p>
               </div>
-            </div> */}
+            </div>
           </div>
 
         </div>
