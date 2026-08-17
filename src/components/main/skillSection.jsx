@@ -23,6 +23,10 @@ const skills = [
     name: "Git",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
   },
+  {
+    name:"GitHUb",
+    img:"https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg"
+  }
 ];
 
 function SkillSection() {
